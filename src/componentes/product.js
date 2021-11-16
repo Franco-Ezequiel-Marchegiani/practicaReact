@@ -1,16 +1,11 @@
 import React from 'react';
-import imageProduct1 from '../assets/img/reloj1.jpg'
-import imageProduct2 from '../assets/img/reloj1.jpg'
-import imageProduct3 from '../assets/img/reloj1.jpg'
-import imageProduct4 from '../assets/img/reloj1.jpg'
-function Product(){
-    let imagenes = [imageProduct1, imageProduct2, imageProduct3, imageProduct4]
+function Product(props){
   return (
     <article>
-       <img src={imageProduct1} alt="Reloj"/>
-       <h2>Lorem, ipsum.</h2>
-       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni mollitia blanditiis natus dicta error, cum alias ipsam libero odio impedit, fuga at dolore voluptatem illum pariatur cupiditate fugit, ullam amet?</p>
-        <h2>Precio: $450</h2>
+       <img src={props.image} alt="Reloj"/>
+       <h2>{props.title}</h2>
+       <p>{props.description}</p>
+        <h2>{props.price}</h2>
         <button>Ver más</button>
     </article>
   )
